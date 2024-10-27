@@ -1,0 +1,4 @@
+RewriteEngine On
+# スマホ以外のユーザーエージェントはPCフォルダーに移動する
+RewriteCond %{HTTP_USER_AGENT} !^(android|iphone|ipad) [NC]
+RewriteRule ^(.*)$ /pc/$1 [L]
