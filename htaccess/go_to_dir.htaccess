@@ -1,11 +1,11 @@
 RewriteEngine On
 
 # 除外するディレクトリを指定（例: /exclude-dir）
-RewriteCond %{REQUEST_URI} !^/exclude-dir [NC]
+# RewriteCond %{REQUEST_URI} !^/exclude-dir [NC]
 
 # Android, iPhone, iPadユーザーエージェントはspフォルダーに移動する
-RewriteCond %{HTTP_USER_AGENT} (android|iphone|ipad) [NC]
-RewriteRule ^(.*)$ /sp/$1 [L]
+# RewriteCond %{HTTP_USER_AGENT} (android|iphone|ipad) [NC]
+# RewriteRule ^(.*)$ /sp/$1 [L]
 
 # それ以外のユーザーエージェントはpcフォルダーに移動する
 RewriteCond %{HTTP_USER_AGENT} !^(android|iphone|ipad) [NC]
